@@ -122,7 +122,7 @@ WeatherProvider.register("darksky", {
 			"clear-night": "night-clear",
 			rain: "rain",
 			snow: "snow",
-			sleet: "snow",
+			sleet: "sleet",
 			wind: "wind",
 			fog: "fog",
 			cloudy: "cloudy",
