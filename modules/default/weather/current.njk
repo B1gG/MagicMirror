@@ -1,7 +1,11 @@
 {% if current %}
     {% if not config.onlyTemp %}
         <div class="normal medium">
-            <span class="wi wi-strong-wind dimmed"></span>
+            {% if config.showAnimatedIcons %}
+                <span class="awi awi-line awi-wind" style="height: 40px;width: 40px;"></span>
+            {% else %}
+                <span class="wi wi-strong-wind dimmed"></span>
+            {% endif %}
             <span>
                 {% if config.useBeaufort %}
                     {{ current.beaufortWindSpeed() | round }}
@@ -27,7 +31,11 @@
                 <span>{{ current.humidity | decimalSymbol }}</span><sup>&nbsp;<i class="wi wi-humidity humidityIcon"></i></sup>
             {% endif %}
             {% if config.showSun %}
-                <span class="wi dimmed wi-{{ current.nextSunAction() }}"></span>
+                {% if config.showAnimatedIcons %}
+                    <span class="awi awi-line awi-{{ current.nextSunAction() }}" style="height: 40px;width: 40px;"></span>
+                {% else %}
+                    <span class="wi dimmed wi-{{ current.nextSunAction() }}"></span>
+                {% endif %}
                 <span>
                     {% if current.nextSunAction() === "sunset" %}
                         {{ current.sunset | formatTime }}
@@ -39,10 +47,14 @@
         </div>
     {% endif %}
     <div class="large light">
-        <span class="wi weathericon wi-{{current.weatherType}}"></span>
-        <span class="bright">
-            {{ current.temperature | roundValue | unit("temperature") | decimalSymbol }}
-        </span>
+        {% if config.showAnimatedIcons %}
+            <span class="awi awi-line awi-{{current.weatherType}}" style="height: 65px;width: 65px;"></span>
+        {% else %}
+            <span class="wi weathericon wi-{{current.weatherType}}"></span>
+        {% endif %}
+            <span class="bright">
+                {{ current.temperature | roundValue | unit("temperature") | decimalSymbol }}
+            </span>
     </div>
     <div class="normal light indoor">
         {% if config.showIndoorTemperature and indoor.temperature %}

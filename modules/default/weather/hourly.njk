@@ -6,7 +6,13 @@
         {% for hour in hours %}
             <tr {% if config.colored %}class="colored"{% endif %} {% if config.fade %}style="opacity: {{ currentStep | opacity(numSteps) }};"{% endif %}>
                 <td class="day">{{ hour.date | formatTime }}</td>
-                <td class="bright weather-icon"><span class="wi weathericon wi-{{ hour.weatherType }}"></span></td>
+                <td class="bright weather-icon">
+                {% if config.showAnimatedIcons %}
+                    <span class="awi awi-line awi-{{ hour.weatherType }}" style="height: 30px;width: 30px;"></span>
+                {% else %}
+                    <span class="wi weathericon wi-{{ hour.weatherType }}"></span>
+                {% endif %}
+                </td>
                 <td class="align-right bright">
                     {{ hour.temperature | roundValue | unit("temperature") }}
                 </td>

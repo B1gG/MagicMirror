@@ -12,7 +12,13 @@
                 {% else %}
                     <td class="day">{{ f.date.format('ddd') }}</td>
                 {% endif %}
-                <td class="bright weather-icon"><span class="wi weathericon wi-{{ f.weatherType }}"></span></td>
+                <td class="bright weather-icon">
+                {% if config.showAnimatedIcons %}
+                    <span class="awi awi-line awi-{{ f.weatherType }}" style="height: 28px;width: 28px;"></span>
+                {% else %}
+                    <span class="wi weathericon wi-{{ f.weatherType }}"></span>
+                {% endif %}
+                </td>
                 <td class="align-right bright max-temp">
                     {{ f.maxTemperature | roundValue | unit("temperature") | decimalSymbol }}
                 </td>
