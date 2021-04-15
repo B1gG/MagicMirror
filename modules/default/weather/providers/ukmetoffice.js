@@ -176,7 +176,7 @@ WeatherProvider.register("ukmetoffice", {
 			1: "day-sunny",
 			2: "night-alt-cloudy",
 			3: "day-cloudy",
-			5: "fog",
+			5: "mist",
 			6: "fog",
 			7: "cloudy",
 			8: "cloud",
