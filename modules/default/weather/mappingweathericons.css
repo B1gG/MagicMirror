@@ -90,9 +90,6 @@
 .awi-line.awi-fog-day {
   background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/fog-day.svg);
 }
-.awi-line.awi-fog-night {
-  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/fog-night.svg);
-}
 .awi-line.awi-high-alt {
   background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/high-alt.svg);
 }
@@ -113,9 +110,6 @@
 }
 .awi-line.awi-low {
   background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/low.svg);
-}
-.awi-line.awi-mist {
-  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/mist.svg);
 }
 .awi-line.awi-moon-first-quarter {
   background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/moon-first-quarter.svg);
@@ -147,20 +141,12 @@
 .awi-line.awi-moonset {
   background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/moonset.svg);
 }
-.awi-line.awi-overcast-day {
-  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/overcast-day.svg);
-}
 .awi-line.awi-overcast {
   background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/overcast.svg);
 }
-.awi-line.awi-partly-cloudy-day-fog {
-  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-day-fog.svg);
-}
+
 .awi-line.awi-partly-cloudy-night-fog {
   background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-night-fog.svg);
-}
-.awi-line.awi-snowflake {
-  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/snowflake.svg);
 }
 .awi-line.awi-star {
   background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/star.svg);
@@ -201,14 +187,21 @@
   display: inline-block;
 }
 
-/* Compatibility as weathericons dont have one for mist */
+/* 
+REMAPPING: in this section you can remap icon from different libraries
+           this should useful for when the API can returns more detailes status
+*/
+/* 
+wi-mist: remapping fog icon as mist for the WI library. 
+Used by ukmetoffice.js and ukmetofficedatahub.js 
+*/
 .wi-mist:before {
   content: "\f014";
 }
 
 /* Mapping UK MetOffice Icons 
-   Based on the "status" returned by the module ukmetofficedatahub
-   Reference canbe found here: https://metoffice.apiconnect.ibmcloud.com/metoffice/production/node/264
+   Based on the "status" returned by the module ukmetoffice and ukmetofficedatahub
+   Reference can be found here: https://metoffice.apiconnect.ibmcloud.com/metoffice/production/node/264
 */
 /* Clear night -> 0: "night-clear" */
 .awi-line.awi-night-clear {
@@ -378,8 +371,8 @@
 }
 
 /* Mapping OpenWeatherMap Icons 
-   Based on the "status" returned by the module ukmetofficedatahub
-   Reference canbe found here: https://metoffice.apiconnect.ibmcloud.com/metoffice/production/node/264
+   Based on the "status" returned by the module openweathermap.js
+   Reference canbe found at: 
 */
 
 /* "01d": "day-sunny" -> .awi-line.awi-line.awi-day-sunny */
@@ -435,15 +428,15 @@
   display: inline-block;
 }
 /* "50n": "night-alt-cloudy-windy" */
-.awi-line.night-alt-cloudy-windy {
+.awi-line.awi-night-alt-cloudy-windy {
   background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/overcast-night.svg);
   content: "";
   display: inline-block;
 }
 
-/* Mapping OpenWeatherMap Icons 
-   Based on the "status" returned by the module ukmetofficedatahub
-   Reference canbe found here: https://metoffice.apiconnect.ibmcloud.com/metoffice/production/node/264
+/* Mapping DarkSky Icons 
+   Based on the "status" returned by the module darksky.js
+   Reference canbe found at: 
 */
 /* "clear-day": "day-sunny" -> .awi-line.awi-line.awi-day-sunny */
 /* "clear-night": "night-clear" -> .awi-line.awi-night-clear */
@@ -455,3 +448,181 @@
 /* cloudy: "cloudy" -> .awi-line.awi-cloudy */
 /* "partly-cloudy-day": "day-cloudy" -> .awi-line.awi-day-cloudy */
 /* "partly-cloudy-night": "night-cloudy" -> .awi-line.awi-night-cloudy */
+
+/* Mapping SMBI Icons 
+   Based on the "status" returned by the module providers/smhi.js
+   Reference canbe found at: 
+*/
+
+/* "day-sunny" -> .awi-line.awi-day-sunny */
+/* "night-clear" -> .awi-line.awi-night-clear */
+/* "day-sunny-overcast" */
+.awi-line.awi-day-sunny-overcast {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/overcast-day.svg);
+  content: "";
+  display: inline-block;
+}
+/* "night-partly-cloudy" */
+.awi-line.awi-night-partly-cloudy {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/overcast-night.svg);
+  content: "";
+  display: inline-block;
+}
+/* "day-cloudy" -> .awi-line.awi-day-cloudy */
+/* "night-cloudy" -> .awi-line.awi-night-cloudy */
+/* "cloudy" -> .awi-line.awi-cloudy */
+/* "fog" -> .awi-line.awi-fog */
+/* "showers" -> .awi-line.awi-showers */
+/* "thunderstorm" -> .awi-line.awi-thunderstorm */
+/* "sleet" -> .awi-line.awi-sleet */
+/* "snow" -> .awi-line.awi-snow */
+/* "rain" -> .awi-line.awi-rain */
+
+/* Mapping Weatherbit Icons 
+   Based on the "status" returned by the module weatherbit.js
+   Reference canbe found at: 
+*/
+/* "day-thunderstorm" -> .awi-line.awi-day-thunderstorm */
+/* "night-alt-thunderstorm" -> .awi-line.awi-night-alt-thunderstorm */
+/* "thunderstorm" -> .awi-line.awi-thunderstorm */
+/* "day-sleet-storm" */
+.awi-line.awi-day-sleet-storm {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-day-sleet.svg);
+  content: "";
+  display: inline-block;
+}
+/* "night-alt-sleet-storm" */
+.awi-line.awi-night-alt-sleet-storm {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-night-sleet.svg);
+  content: "";
+  display: inline-block;
+}
+/* "day-sprinkle" -> .awi-line.awi-day-sprinkle */
+/* "night-alt-sprinkle" */
+.awi-line.awi-night-alt-sprinkle {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-night-drizzle.svg);
+  content: "";
+  display: inline-block;
+}
+/* "day-shower" -> .awi-line.awi-day-showers */
+/* "night-alt-shower" -> .awi-line.awi-night-alt-showers */
+/* "day-rain" */
+.awi-line.awi-day-rain {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-day-rain.svg);
+  content: "";
+  display: inline-block;
+}
+/* "night-alt-rain" */
+.awi-line.awi-night-alt-rain {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-night-rain.svg);
+  content: "";
+  display: inline-block;
+}
+/* "day-sleet" -> .awi-line.awi-day-sleet */
+/* "night-alt-sleet" -> .awi-line.awi-night-alt-sleet */
+/* "day-snow" -> .awi-line.awi-day-snow */
+/* "night-alt-snow" -> .awi-line.awi-night-alt-snow */
+/* "day-snow-wind" */
+.awi-line.awi-day-snow-wind {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-day-snow.svg);
+  content: "";
+  display: inline-block;
+}
+/* "night-alt-snow-wind" */
+.awi-line.awi-night-alt-snow-wind {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-night-snow.svg);
+  content: "";
+  display: inline-block;
+}
+/* "snowflake-cold" */
+.awi-line.awi-snowflake-cold {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/snowflake.svg);
+  content: "";
+  display: inline-block;
+}
+/* "day-rain-mix" */
+.awi-line.awi-day-rain-mix {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-day-rain.svg);
+  content: "";
+  display: inline-block;
+}
+/* "night-alt-rain-mix" */
+.awi-line.awi-night-alt-rain-mix {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-night-rain.svg);
+  content: "";
+  display: inline-block;
+}
+/* "day-haze" haze icon is not available yet but we use fog icon instead */
+.awi-line.awi-day-haze {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-day-fog.svg);
+  content: "";
+  display: inline-block;
+}
+/* "dust" dust icon is not available yet but we use mist icon instead */
+.awi-line.awi-dust {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/mist.svg);
+  content: "";
+  display: inline-block;
+}
+/* "smoke" smoke icon is not available yet but we use mist icon instead */
+.awi-line.awi-smoke {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/mist.svg);
+  content: "";
+  display: inline-block;
+}
+/* "day-fog" */
+.awi-line.awi-day-fog {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-day-fog.svg);
+  content: "";
+  display: inline-block;
+}
+/* "night-fog" */
+.awi-line.awi-night-fog {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/fog-night.svg);
+  content: "";
+  display: inline-block;
+}
+/* "fog" -> .awi-line.awi-fog */
+/* "day-sunny" -> .awi-line.awi-day-sunny */
+/* "night-clear" -> .awi-line.awi-night-clear */
+/* "day-sunny-overcast" -> .awi-line.awi-day-sunny-overcast */
+/* "night-alt-partly-cloudy" */
+.awi-line.awi-night-alt-partly-cloudy {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/overcast-night.svg);
+  content: "";
+  display: inline-block;
+}
+/* "day-cloudy" -> .awi-line.awi-day-cloudy */
+/* "night-alt-cloudy" -> .awi-line.awi-night-alt-cloudy */
+/* "cloudy" -> .awi-fill.awi-cloudy */
+/* "rain-mix" */
+.awi-line.awi-rain-mix {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-day-rain.svg);
+  content: "";
+  display: inline-block;
+}
+
+/* Mapping WeatherGov Icons 
+   Based on the "status" returned by the module weathergov.js
+   Reference canbe found at: https://w1.weather.gov/xml/current_obs/weather.php
+*/
+/* "day-cloudy" -> .awi-line.awi-day-cloudy */
+/* "night-cloudy" -> .awi-line.awi-night-cloudy */
+/* "cloudy" -> .awi-fill.awi-cloudy */
+/* "rain-mix" -> .awi-line.awi-rain-mix */
+/* "snow" -> .awi-fill.awi-snow */
+/* "night-snow" -> .awi-line.awi-night-snow */
+/* "thunderstorm" -> .awi-line.awi-thunderstorm */
+/* "night-thunderstorm" -> .awi-line.awi-night-thunderstorm */
+/* "showers" -> .awi-line.awi-showers */
+/* "night-showers" -> .awi-line.awi-night-showers */
+/* "rain" -> .awi-line.awi-rain */
+/* "night-rain" -> .awi-line.awi-night-rain */
+/* "cloudy-windy" -> .awi-line.awi-cloudy-windy */
+/* "night-alt-cloudy-windy" -> .awi-line.awi-night-alt-cloudy-windy */
+/* "day-sunny" -> .awi-line.awi-day-sunny */
+/* "night-clear" -> .awi-line.awi-night-clear */
+/* "dust" -> .awi-line.awi-dust */
+/* "fog" -> .awi-line.awi-fog */
+/* "smoke" -> .awi-line.awi-smoke */
+/* "day-haze" -> .awi-line.awi-day-haze */
