@@ -1,0 +1,457 @@
+.awi {
+  vertical-align: middle;
+  background-repeat: no-repeat;
+}
+
+/* filled SVG Icons */
+.awi-fill.awi-clear-day {
+  background: url(fill/all/clear-day.svg);
+}
+.awi-fill.awi-clear-night {
+  background: url(fill/all/clear-night.svg);
+}
+.awi-fill.awi-cloudy {
+  background: url(fill/all/cloudy.svg);
+}
+.awi-fill.awi-compass {
+  background: url(fill/all/compass.svg);
+}
+.awi-fill.awi-drizzle {
+  background: url(fill/all/drizzle.svg);
+}
+.awi-fill.awi-droplet {
+  background: url(fill/all/droplet.svg);
+}
+.awi-fill.awi-hail {
+  background: url(fill/all/hail.svg);
+}
+.awi-fill.awi-mist {
+  background: url(fill/all/mist.svg);
+}
+.awi-fill.awi-partly-cloudy-day-drizzle {
+  background: url(fill/all/partly-cloudy-day-drizzle.svg);
+}
+.awi-fill.awi-partly-cloudy-day-hail {
+  background: url(fill/all/partly-cloudy-day-hail.svg);
+}
+.awi-fill.awi-partly-cloudy-day-rain {
+  background: url(fill/all/partly-cloudy-day-rain.svg);
+}
+.awi-fill.awi-partly-cloudy-day-snow {
+  background: url(fill/all/partly-cloudy-day-snow.svg);
+}
+.awi-fill.awi-partly-cloudy-day {
+  background: url(fill/all/partly-cloudy-day.svg);
+}
+.awi-fill.awi-partly-cloudy-night-drizzle {
+  background: url(fill/all/partly-cloudy-night-drizzle.svg);
+}
+.awi-fill.awi-partly-cloudy-night-hail {
+  background: url(fill/all/partly-cloudy-night-hail.svg);
+}
+.awi-fill.awi-partly-cloudy-night-rain {
+  background: url(fill/all/partly-cloudy-night-rain.svg);
+}
+.awi-fill.awi-partly-cloudy-night-snow {
+  background: url(fill/all/partly-cloudy-night-snow.svg);
+}
+.awi-fill.awi-partly-cloudy-night {
+  src: url(fill/all/partly-cloudy-night.svg);
+}
+.awi-fill.awi-rain {
+  background: url(fill/all/rain.svg);
+}
+.awi-fill.awi-snow {
+  background: url(fill/all/snow.svg);
+}
+.awi-fill.awi-sunrise {
+  background: url(fill/all/sunrise.svg);
+}
+.awi-fill.awi-sunset {
+  background: url(fill/all/sunset.svg);
+}
+.awi-fill.awi-thermometer {
+  background: url(fill/all/thermometer.svg);
+}
+.awi-fill.awi-thunderstorms {
+  background: url(fill/all/thunderstorms.svg);
+}
+.awi-fill.awi-tornado {
+  background: url(fill/all/tornado.svg);
+}
+.awi-fill.awi-wind {
+  background: url(fill/all/wind.svg);
+}
+
+/* line SVG Icons */
+.awi-line.awi-compass {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/compass.svg);
+}
+.awi-line.awi-fog-day {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/fog-day.svg);
+}
+.awi-line.awi-fog-night {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/fog-night.svg);
+}
+.awi-line.awi-high-alt {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/high-alt.svg);
+}
+.awi-line.awi-high {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/high.svg);
+}
+.awi-line.awi-horizon {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/horizon.svg);
+}
+.awi-line.awi-hurricane {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/hurricane.svg);
+}
+.awi-line.awi-lightning-bolt {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/lightning-bolt.svg);
+}
+.awi-line.awi-low-alt {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/low-alt.svg);
+}
+.awi-line.awi-low {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/low.svg);
+}
+.awi-line.awi-mist {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/mist.svg);
+}
+.awi-line.awi-moon-first-quarter {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/moon-first-quarter.svg);
+}
+.awi-line.awi-moon-full {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/moon-full.svg);
+}
+.awi-line.awi-moon-last-quarter {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/moon-last-quarter.svg);
+}
+.awi-line.awi-moon-new {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/moon-new.svg);
+}
+.awi-line.awi-moon-waning-crescent {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/moon-waning-crescent.svg);
+}
+.awi-line.awi-moon-waning-gibbous {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/moon-waning-gibbous.svg);
+}
+.awi-line.awi-moon-waxing-crescent {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/moon-waxing-crescent.svg);
+}
+.awi-line.awi-moon-waxing-gibbous {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/moon-waxing-gibbous.svg);
+}
+.awi-line.awi-moonrise {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/moonrise.svg);
+}
+.awi-line.awi-moonset {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/moonset.svg);
+}
+.awi-line.awi-overcast-day {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/overcast-day.svg);
+}
+.awi-line.awi-overcast {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/overcast.svg);
+}
+.awi-line.awi-partly-cloudy-day-fog {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-day-fog.svg);
+}
+.awi-line.awi-partly-cloudy-night-fog {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-night-fog.svg);
+}
+.awi-line.awi-snowflake {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/snowflake.svg);
+}
+.awi-line.awi-star {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/star.svg);
+}
+.awi-line.awi-thermometer {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/thermometer.svg);
+}
+.awi-line.awi-thunderstorms-day {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/thunderstorms-day.svg);
+}
+.awi-line.awi-thunderstorms {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/thunderstorms.svg);
+}
+.awi-line.awi-tornado {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/tornado.svg);
+}
+.awi-line.awi-windsock {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/windsock.svg);
+}
+
+/* General Icons */
+/* wind spedd icon */
+.awi-line.awi-wind {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/wind.svg);
+  content: "";
+  display: inline-block;
+}
+/* sunrise icon */
+.awi-line.awi-sunrise {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/sunrise.svg);
+  content: "";
+  display: inline-block;
+}
+/* sunset icon */
+.awi-line.awi-sunset {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/sunset.svg);
+  content: "";
+  display: inline-block;
+}
+
+/* Compatibility as weathericons dont have one for mist */
+.wi-mist:before {
+  content: "\f014";
+}
+
+/* Mapping UK MetOffice Icons 
+   Based on the "status" returned by the module ukmetofficedatahub
+   Reference canbe found here: https://metoffice.apiconnect.ibmcloud.com/metoffice/production/node/264
+*/
+/* Clear night -> 0: "night-clear" */
+.awi-line.awi-night-clear {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/clear-night.svg);
+  content: "";
+  display: inline-block;
+}
+/* Sunny day -> 1: "day-sunny" */
+.awi-line.awi-day-sunny {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/clear-day.svg);
+  content: "";
+  display: inline-block;
+}
+/* Partly cloudy (night) -> 2: "night-alt-cloudy" */
+.awi-line.awi-night-alt-cloudy {
+  background-image: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-night.svg);
+  content: "";
+  display: inline-block;
+}
+/* Partly cloudy (day) -> 3: "day-cloudy" */
+.awi-line.awi-day-cloudy {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-day.svg);
+  content: "";
+  display: inline-block;
+}
+/* In the module says 5: "fog" but should be mist */
+/* Mist -> 5: "fog" */
+.awi-line.awi-mist {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/mist.svg);
+  content: "";
+  display: inline-block;
+}
+/* Fog -> 6: "fog" */
+.awi-line.awi-fog {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/fog.svg);
+  content: "";
+  display: inline-block;
+}
+/* Cloudy -> 7: "cloudy" */
+.awi-line.awi-cloudy {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/cloudy.svg);
+  content: "";
+  display: inline-block;
+}
+/* Overcast -> 8: "cloud" */
+.awi-line.awi-cloud {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/overcast.svg);
+  content: "";
+  display: inline-block;
+}
+/* Light rain shower (night) -> 9: "night-sprinkle" */
+.awi-line.awi-night-sprinkle {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-night-drizzle.svg);
+  content: "";
+  display: inline-block;
+}
+/* Light rain shower (day) -> 10: "day-sprinkle" */
+.awi-line.awi-day-sprinkle {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-day-drizzle.svg);
+  content: "";
+  display: inline-block;
+}
+/* Drizzle -> 11: "raindrops" */
+.awi-line.awi-raindrops {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/drizzle.svg);
+  content: "";
+  display: inline-block;
+}
+/* Light rain -> 12: "sprinkle" */
+.awi-line.awi-sprinkle {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/raindrop.svg);
+  content: "";
+  display: inline-block;
+}
+/* Heavy rain shower (night) -> 13: "night-alt-showers" */
+.awi-line.awi-night-alt-showers {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-night-rain.svg);
+  content: "";
+  display: inline-block;
+}
+/* Heavy rain shower (day) -> 14: "day-showers" */
+.awi-line.awi-day-showers {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-day-rain.svg);
+  content: "";
+  display: inline-block;
+}
+/* Heavy rain -> 15: "rain" */
+.awi-line.awi-rain {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/rain.svg);
+  content: "";
+  display: inline-block;
+}
+/* Sleet shower (night) -> 16: "night-alt-sleet" */
+.awi-line.awi-night-alt-sleet {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-night-sleet.svg);
+  content: "";
+  display: inline-block;
+}
+/* Sleet shower (day) -> 17: "day-sleet" */
+.awi-line.awi-day-sleet {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-day-sleet.svg);
+  content: "";
+  display: inline-block;
+}
+/* Sleet -> 18: "sleet" */
+.awi-line.awi-sleet {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/sleet.svg);
+  content: "";
+  display: inline-block;
+}
+/* Hail shower (night) -> 19: "night-alt-hail" */
+.awi-line.awi-night-alt-hail {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-night-hail.svg);
+  content: "";
+  display: inline-block;
+}
+/* Hail shower (day) -> 20: "day-hail" */
+.awi-line.awi-day-hail {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-day-hail.svg);
+  content: "";
+  display: inline-block;
+}
+/* Hail -> 21: "hail" */
+.awi-line.awi-hail {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/hail.svg);
+  content: "";
+  display: inline-block;
+}
+/* Heavy snow shower (night) -> 25: "night-alt-snow" */
+/* Light snow shower (night) -> 22: "night-alt-snow" */
+.awi-line.awi-night-alt-snow {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-night-snow.svg);
+  content: "";
+  display: inline-block;
+}
+/* Heavy snow shower (day) -> 26: "day-snow" */
+/* Light snow shower (day) -> 23: "day-snow" */
+.awi-line.awi-day-snow {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-day-snow.svg);
+  content: "";
+  display: inline-block;
+}
+/* Heavy snow -> 27: "snow" */
+/* Light snow -> 24: "snow" */
+.awi-line.awi-snow {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/snow.svg);
+  content: "";
+  display: inline-block;
+}
+/* Thunder shower (night) -> 28: "night-alt-thunderstorm" */
+.awi-line.awi-night-alt-thunderstorm {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/thunderstorms-night-rain.svg);
+  content: "";
+  display: inline-block;
+}
+/* Thunder shower (day) -> 29: "day-thunderstorm" */
+.awi-line.awi-day-thunderstorm {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/thunderstorms-day-rain.svg);
+  content: "";
+  display: inline-block;
+}
+/* Thunder -> 30: "thunderstorm" */
+.awi-line.awi-thunderstorm {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/thunderstorms-rain.svg);
+  content: "";
+  display: inline-block;
+}
+
+/* Mapping OpenWeatherMap Icons 
+   Based on the "status" returned by the module ukmetofficedatahub
+   Reference canbe found here: https://metoffice.apiconnect.ibmcloud.com/metoffice/production/node/264
+*/
+
+/* "01d": "day-sunny" -> .awi-line.awi-line.awi-day-sunny */
+/* "02d": "day-cloudy" -> .awi-line.awi-day-cloudy */
+/* "03d": "cloudy" -> .awi-line.awi-cloudy */
+/* "04d": "cloudy-windy" */
+.awi-line.awi-cloudy-windy {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-day.svg);
+  content: "";
+  display: inline-block;
+}
+/* "09d": "showers" */
+.awi-line.awi-showers {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-day-rain.svg);
+  content: "";
+  display: inline-block;
+}
+/* "10d": "rain" -> .awi-line.awi-rain */
+/* "11d": "thunderstorm" -> .awi-line.awi-thunderstorm  */
+/* "13d": "snow" -> .awi-line.awi-snow */
+/* "50d": "fog" -> .awi-line.awi-fog */
+/* "01n": "night-clear" -> .awi-line.awi-night-clear */
+/* "02n": "night-cloudy" */
+/* "03n": "night-cloudy" */
+/* "04n": "night-cloudy" */
+.awi-line.awi-night-cloudy {
+  background-image: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-night.svg);
+  content: "";
+  display: inline-block;
+}
+/* "09n": "night-showers" */
+.awi-line.awi-night-showers {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-night-drizzle.svg);
+  content: "";
+  display: inline-block;
+}
+/* "10n": "night-rain" */
+.awi-line.awi-night-rain {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-night-rain.svg);
+  content: "";
+  display: inline-block;
+}
+/* "11n": "night-thunderstorm" */
+.awi-line.awi-night-thunderstorm {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/thunderstorms-night.svg);
+  content: "";
+  display: inline-block;
+}
+/* "13n": "night-snow" */
+.awi-line.awi-night-snow {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/partly-cloudy-night-snow.svg);
+  content: "";
+  display: inline-block;
+}
+/* "50n": "night-alt-cloudy-windy" */
+.awi-line.night-alt-cloudy-windy {
+  background: url(/vendor/node_modules/@bybas/weather-icons/production/line/all/overcast-night.svg);
+  content: "";
+  display: inline-block;
+}
+
+/* Mapping OpenWeatherMap Icons 
+   Based on the "status" returned by the module ukmetofficedatahub
+   Reference canbe found here: https://metoffice.apiconnect.ibmcloud.com/metoffice/production/node/264
+*/
+/* "clear-day": "day-sunny" -> .awi-line.awi-line.awi-day-sunny */
+/* "clear-night": "night-clear" -> .awi-line.awi-night-clear */
+/* rain: "rain" -> .awi-line.awi-rain */
+/* snow: "snow" -> .awi-line.awi-snow */
+/* sleet: "sleet" -> .awi-line.awi-sleet */
+/* wind: "wind" -> .awi-line.awi-wind */
+/* fog: "fog" -> .awi-line.awi-fog */
+/* cloudy: "cloudy" -> .awi-line.awi-cloudy */
+/* "partly-cloudy-day": "day-cloudy" -> .awi-line.awi-day-cloudy */
+/* "partly-cloudy-night": "night-cloudy" -> .awi-line.awi-night-cloudy */

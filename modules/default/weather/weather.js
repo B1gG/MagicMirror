@@ -42,7 +42,8 @@ Module.register("weather", {
 		onlyTemp: false,
 		showPrecipitationAmount: false,
 		colored: false,
-		showFeelsLike: true
+		showFeelsLike: true,
+		showAnimatedIcons: false // to use the animated icons
 	},
 
 	// Module properties.
@@ -50,7 +51,7 @@ Module.register("weather", {
 
 	// Define required scripts.
 	getStyles: function () {
-		return ["font-awesome.css", "weather-icons.css", "weather.css"];
+		return ["font-awesome.css", "mappingweathericons.css", "weather-icons.css", "weather.css"];
 	},
 
 	// Return the scripts that are necessary for the weather module.
