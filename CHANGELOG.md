@@ -15,11 +15,13 @@ _This release is scheduled to be released on 2021-04-01._
 - Added German translation for "PRECIP".
 - Added first test for Alert module.
 - Added support for `dateFormat` when not using `timeFormat: "absolute"`
-- Added custom-properties in css for improved styling experience, see `custom.css.sample` file
+- Added custom-properties in css of core and modules for improved styling experience, see `custom.css.sample` file
 
 ### Updated
 
 - Bump node-ical to v0.13.0 (now last runtime dependency using deprecated `request` package is removed).
+- Use codecov in informational mode
+- Refactor code into es6 where possible (e.g. var -> let/const)
 
 ### Removed
 
