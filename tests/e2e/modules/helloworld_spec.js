@@ -1,50 +1,33 @@
 const helpers = require("../global-setup");
 
-const describe = global.describe;
-const it = global.it;
-const beforeEach = global.beforeEach;
-const afterEach = global.afterEach;
-
 describe("Test helloworld module", function () {
-	helpers.setupTimeout(this);
-
-	var app = null;
-
-	beforeEach(function () {
-		return helpers
-			.startApplication({
-				args: ["js/electron.js"]
-			})
-			.then(function (startedApp) {
-				app = startedApp;
-			});
-	});
-
-	afterEach(function () {
-		return helpers.stopApplication(app);
+	afterAll(function () {
+		helpers.stopApplication();
 	});
 
 	describe("helloworld set config text", function () {
-		before(function () {
-			// Set config sample for use in test
-			process.env.MM_CONFIG_FILE = "tests/configs/modules/helloworld/helloworld.js";
+		beforeAll(function (done) {
+			helpers.startApplication("tests/configs/modules/helloworld/helloworld.js");
+			helpers.getDocument(done, 1000);
 		});
 
-		it("Test message helloworld module", async function () {
-			const elem = await app.client.$("helloworld");
-			return elem.getText(".helloworld").should.eventually.equal("Test HelloWorld Module");
+		it("Test message helloworld module", function () {
+			const elem = document.querySelector(".helloworld");
+			expect(elem).not.toBe(null);
+			expect(elem.textContent).toContain("Test HelloWorld Module");
 		});
 	});
 
 	describe("helloworld default config text", function () {
-		before(function () {
-			// Set config sample for use in test
-			process.env.MM_CONFIG_FILE = "tests/configs/modules/helloworld/helloworld_default.js";
+		beforeAll(function (done) {
+			helpers.startApplication("tests/configs/modules/helloworld/helloworld_default.js");
+			helpers.getDocument(done, 1000);
 		});
 
-		it("Test message helloworld module", async function () {
-			const elem = await app.client.$("helloworld");
-			return elem.getText(".helloworld").should.eventually.equal("Hello World!");
+		it("Test message helloworld module", function () {
+			const elem = document.querySelector(".helloworld");
+			expect(elem).not.toBe(null);
+			expect(elem.textContent).toContain("Hello World!");
 		});
 	});
 });

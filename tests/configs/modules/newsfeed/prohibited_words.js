@@ -3,18 +3,7 @@
  * MIT Licensed.
  */
 let config = {
-	port: 8080,
-	ipWhitelist: ["127.0.0.1", "::ffff:127.0.0.1", "::1"],
-
-	language: "en",
 	timeFormat: 12,
-	units: "metric",
-	electronOptions: {
-		webPreferences: {
-			nodeIntegration: true,
-			enableRemoteModule: true
-		}
-	},
 
 	modules: [
 		{
@@ -27,7 +16,8 @@ let config = {
 						url: "http://localhost:8080/tests/configs/data/feed_test_rodrigoramirez.xml"
 					}
 				],
-				prohibitedWords: ["QPanel"]
+				prohibitedWords: ["QPanel"],
+				showDescription: true
 			}
 		}
 	]

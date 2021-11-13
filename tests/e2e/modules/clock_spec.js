@@ -1,125 +1,116 @@
 const helpers = require("../global-setup");
-const expect = require("chai").expect;
 const moment = require("moment");
 
-const describe = global.describe;
-const it = global.it;
-const beforeEach = global.beforeEach;
-const afterEach = global.afterEach;
-
 describe("Clock module", function () {
-	helpers.setupTimeout(this);
-
-	var app = null;
-
-	beforeEach(function () {
-		return helpers
-			.startApplication({
-				args: ["js/electron.js"]
-			})
-			.then(function (startedApp) {
-				app = startedApp;
-			});
+	afterAll(function () {
+		helpers.stopApplication();
 	});
 
-	afterEach(function () {
-		return helpers.stopApplication(app);
-	});
+	const testMatch = function (element, regex) {
+		const elem = document.querySelector(element);
+		expect(elem).not.toBe(null);
+		expect(elem.textContent).toMatch(regex);
+	};
 
 	describe("with default 24hr clock config", function () {
-		before(function () {
-			// Set config sample for use in test
-			process.env.MM_CONFIG_FILE = "tests/configs/modules/clock/clock_24hr.js";
+		beforeAll(function (done) {
+			helpers.startApplication("tests/configs/modules/clock/clock_24hr.js");
+			helpers.getDocument(done, 1000);
 		});
 
-		it("should show the date in the correct format", async function () {
+		it("should show the date in the correct format", function () {
 			const dateRegex = /^(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), (?:January|February|March|April|May|June|July|August|September|October|November|December) \d{1,2}, \d{4}$/;
-			const elem = await app.client.$(".clock .date");
-			return elem.getText(".clock .date").should.eventually.match(dateRegex);
+			testMatch(".clock .date", dateRegex);
 		});
 
-		it("should show the time in 24hr format", async function () {
+		it("should show the time in 24hr format", function () {
 			const timeRegex = /^(?:2[0-3]|[01]\d):[0-5]\d[0-5]\d$/;
-			const elem = await app.client.$(".clock .time");
-			return elem.getText(".clock .time").should.eventually.match(timeRegex);
+			testMatch(".clock .time", timeRegex);
 		});
 	});
 
 	describe("with default 12hr clock config", function () {
-		before(function () {
-			// Set config sample for use in test
-			process.env.MM_CONFIG_FILE = "tests/configs/modules/clock/clock_12hr.js";
+		beforeAll(function (done) {
+			helpers.startApplication("tests/configs/modules/clock/clock_12hr.js");
+			helpers.getDocument(done, 1000);
 		});
 
-		it("should show the date in the correct format", async function () {
+		it("should show the date in the correct format", function () {
 			const dateRegex = /^(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), (?:January|February|March|April|May|June|July|August|September|October|November|December) \d{1,2}, \d{4}$/;
-			const elem = await app.client.$(".clock .date");
-			return elem.getText(".clock .date").should.eventually.match(dateRegex);
+			testMatch(".clock .date", dateRegex);
 		});
 
-		it("should show the time in 12hr format", async function () {
+		it("should show the time in 12hr format", function () {
 			const timeRegex = /^(?:1[0-2]|[1-9]):[0-5]\d[0-5]\d[ap]m$/;
-			const elem = await app.client.$(".clock .time");
-			return elem.getText(".clock .time").should.eventually.match(timeRegex);
+			testMatch(".clock .time", timeRegex);
 		});
 	});
 
 	describe("with showPeriodUpper config enabled", function () {
-		before(function () {
-			// Set config sample for use in test
-			process.env.MM_CONFIG_FILE = "tests/configs/modules/clock/clock_showPeriodUpper.js";
+		beforeAll(function (done) {
+			helpers.startApplication("tests/configs/modules/clock/clock_showPeriodUpper.js");
+			helpers.getDocument(done, 1000);
 		});
 
-		it("should show 12hr time with upper case AM/PM", async function () {
+		it("should show 12hr time with upper case AM/PM", function () {
 			const timeRegex = /^(?:1[0-2]|[1-9]):[0-5]\d[0-5]\d[AP]M$/;
-			const elem = await app.client.$(".clock .time");
-			return elem.getText(".clock .time").should.eventually.match(timeRegex);
+			testMatch(".clock .time", timeRegex);
 		});
 	});
 
 	describe("with displaySeconds config disabled", function () {
-		before(function () {
-			// Set config sample for use in test
-			process.env.MM_CONFIG_FILE = "tests/configs/modules/clock/clock_displaySeconds_false.js";
+		beforeAll(function (done) {
+			helpers.startApplication("tests/configs/modules/clock/clock_displaySeconds_false.js");
+			helpers.getDocument(done, 1000);
 		});
 
-		it("should show 12hr time without seconds am/pm", async function () {
+		it("should show 12hr time without seconds am/pm", function () {
 			const timeRegex = /^(?:1[0-2]|[1-9]):[0-5]\d[ap]m$/;
-			const elem = await app.client.$(".clock .time");
-			return elem.getText(".clock .time").should.eventually.match(timeRegex);
+			testMatch(".clock .time", timeRegex);
+		});
+	});
+
+	describe("with showTime config disabled", function () {
+		beforeAll(function (done) {
+			helpers.startApplication("tests/configs/modules/clock/clock_showTime.js");
+			helpers.getDocument(done, 1000);
+		});
+
+		it("should show not show the time when digital clock is shown", function () {
+			const elem = document.querySelector(".clock .digital .time");
+			expect(elem).toBe(null);
 		});
 	});
 
 	describe("with showWeek config enabled", function () {
-		before(function () {
-			// Set config sample for use in test
-			process.env.MM_CONFIG_FILE = "tests/configs/modules/clock/clock_showWeek.js";
+		beforeAll(function (done) {
+			helpers.startApplication("tests/configs/modules/clock/clock_showWeek.js");
+			helpers.getDocument(done, 1000);
 		});
 
-		it("should show the week in the correct format", async function () {
+		it("should show the week in the correct format", function () {
 			const weekRegex = /^Week [0-9]{1,2}$/;
-			const elem = await app.client.$(".clock .week");
-			return elem.getText(".clock .week").should.eventually.match(weekRegex);
+			testMatch(".clock .week", weekRegex);
 		});
 
-		it("should show the week with the correct number of week of year", async function () {
+		it("should show the week with the correct number of week of year", function () {
 			const currentWeekNumber = moment().week();
 			const weekToShow = "Week " + currentWeekNumber;
-			const elem = await app.client.$(".clock .week");
-			return elem.getText(".clock .week").should.eventually.equal(weekToShow);
+			const elem = document.querySelector(".clock .week");
+			expect(elem).not.toBe(null);
+			expect(elem.textContent).toBe(weekToShow);
 		});
 	});
 
 	describe("with analog clock face enabled", function () {
-		before(function () {
-			// Set config sample for use in test
-			process.env.MM_CONFIG_FILE = "tests/configs/modules/clock/clock_analog.js";
+		beforeAll(function (done) {
+			helpers.startApplication("tests/configs/modules/clock/clock_analog.js");
+			helpers.getDocument(done, 1000);
 		});
 
-		it("should show the analog clock face", async () => {
-			await app.client.waitUntilWindowLoaded(10000);
-			const clock = await app.client.$$(".clockCircle");
-			return expect(clock.length).equals(1);
+		it("should show the analog clock face", () => {
+			const elem = document.querySelector(".clockCircle");
+			expect(elem).not.toBe(null);
 		});
 	});
 });

@@ -1,59 +1,34 @@
-const helpers = require("./global-setup");
 const fetch = require("node-fetch");
-const expect = require("chai").expect;
-
-const describe = global.describe;
-const it = global.it;
-const beforeEach = global.beforeEach;
-const afterEach = global.afterEach;
+const helpers = require("./global-setup");
 
 describe("port directive configuration", function () {
-	helpers.setupTimeout(this);
-
-	var app = null;
-
-	beforeEach(function () {
-		return helpers
-			.startApplication({
-				args: ["js/electron.js"]
-			})
-			.then(function (startedApp) {
-				app = startedApp;
-			});
-	});
-
-	afterEach(function () {
-		return helpers.stopApplication(app);
-	});
-
 	describe("Set port 8090", function () {
-		before(function () {
-			// Set config sample for use in this test
-			process.env.MM_CONFIG_FILE = "tests/configs/port_8090.js";
+		beforeAll(function () {
+			helpers.startApplication("tests/configs/port_8090.js");
+		});
+		afterAll(function () {
+			helpers.stopApplication();
 		});
 
 		it("should return 200", function (done) {
 			fetch("http://localhost:8090").then((res) => {
-				expect(res.status).to.equal(200);
+				expect(res.status).toBe(200);
 				done();
 			});
 		});
 	});
 
 	describe("Set port 8100 on environment variable MM_PORT", function () {
-		before(function () {
-			process.env.MM_PORT = 8100;
-			// Set config sample for use in this test
-			process.env.MM_CONFIG_FILE = "tests/configs/port_8090.js";
+		beforeAll(function () {
+			helpers.startApplication("tests/configs/port_8090.js", (process.env.MM_PORT = 8100));
 		});
-
-		after(function () {
-			delete process.env.MM_PORT;
+		afterAll(function () {
+			helpers.stopApplication();
 		});
 
 		it("should return 200", function (done) {
 			fetch("http://localhost:8100").then((res) => {
-				expect(res.status).to.equal(200);
+				expect(res.status).toBe(200);
 				done();
 			});
 		});
